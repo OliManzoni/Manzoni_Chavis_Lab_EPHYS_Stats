@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+[![DOI](https://zenodo.org/badge/1222314509.svg)](https://doi.org/10.5281/zenodo.19910815)
 
 **Description:** v1.0.0 Fast analysis of synaptic plasticity LTP/LTD.
 

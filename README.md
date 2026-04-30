@@ -1,3 +1,6 @@
+
+## Citation
+If you use this software in your research, please cite it as:
 [![DOI](https://zenodo.org/badge/1222314509.svg)](https://doi.org/10.5281/zenodo.19910815)
 
 **Description:** v1.0.0 Fast analysis of synaptic plasticity LTP/LTD.
@@ -64,6 +67,9 @@ Individual files exported as `.csv` from this suite can be integrated into our s
 
 ## 📑 Citations and Credits
 When utilizing this tool for publication, please cite the Chavis Lab and the associated biophysical processing scripts[cite: 1].
+## Citation
+If you use this software in your research, please cite it as:
+[![DOI](https://zenodo.org/badge/1222314509.svg)](https://doi.org/10.5281/zenodo.19910815)
 
 **Developed for the Neuroscience Community | 2026**  
 **Contact:** olivier.manzoni@inserm.fr[cite: 1]
@@ -74,6 +80,10 @@ When utilizing this tool for publication, please cite the Chavis Lab and the ass
 -----------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------
+
+## Citation
+Si vous utilisez ce porgramme, merci de citer:
+[![DOI](https://zenodo.org/badge/1222314509.svg)](https://doi.org/10.5281/zenodo.19910815)
 
 Cette plateforme a été conçue pour standardiser le traitement des données d'électrophysiologie, de la trace brute (`.abf`) aux statistiques prêtes pour la publication. Elle permet de s'affranchir des biais de mesure manuelle en automatisant l'extraction des paramètres biophysiques et la normalisation temporelle.
 
@@ -149,6 +159,8 @@ Cela permet de comparer vos groupes (WT vs Mutant, Sham vs Drug) en tenant compt
 
 ## 📑 Citations et Crédits
 Si vous utilisez cet outil pour vos publications, merci de mentionner le **Chavis Lab** et les scripts de traitement biophysique associés.
+Si vous utilisez ce porgramme, merci de citer:
+[![DOI](https://zenodo.org/badge/1222314509.svg)](https://doi.org/10.5281/zenodo.19910815)
 
 *Développé pour la communauté des neurosciences | 2026*
 *Contact : olivier.manzoni@inserm.fr*

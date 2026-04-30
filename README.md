@@ -1,3 +1,8 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+
+**Description:** v1.0.0 Fast analysis of synaptic plasticity LTP/LTD.
+
+
 # 🧬 Synaptic Plasticity Analysis Suite
 ### Chavis Lab & Manzoni Lab | Preprocessing & Biophysics[cite: 1]
 

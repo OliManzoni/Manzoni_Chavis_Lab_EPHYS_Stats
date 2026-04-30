@@ -16,11 +16,11 @@ if 'extracted_data' not in st.session_state:
 # --- LANGUAGE SELECTION ---
 lang = st.sidebar.selectbox("Language / Langue", ["English", "Français"])
 
-# Translation Dictionary
+# Translation Dictionary & README Content
 T = {
     "English": {
         "lab_title": "Synaptic Plasticity Analysis",
-        "lab_subtitle": "Chavis Lab ",
+        "lab_subtitle": "Chavis Lab",
         "reactive_note": "Synaptic Plasticity (LTP/LTD) Analysis",
         "loading": "📂 1. Loading",
         "f_base": "Baseline File (.abf)",
@@ -53,7 +53,7 @@ T = {
         "peak_s": "fEPSP Peak: Start",
         "peak_e": "fEPSP Peak: End",
         "btn_extract": "🚀 EXTRACT RAW DATA",
-        "tabs": ["📌 Inspection", "📉 Raw Dynamics", "📈 Normalized Analysis"],
+        "tabs": ["📌 Inspection", "📉 Raw Dynamics", "📈 Normalized Analysis", "📖 Documentation"],
         "inspect_sub": "Validation (CNQX subtraction included)",
         "trace_cnqx": "CNQX Trace",
         "trace_bsl": "Baseline",
@@ -72,7 +72,30 @@ T = {
         "charge_pct": "Charge (% Baseline)",
         "export_header": "Export",
         "export_name": "Export filename:",
-        "export_btn": "💾 EXPORT FULL CSV"
+        "export_btn": "💾 EXPORT FULL CSV",
+        "github_link": "🔗 [Source Code & GitHub Repository](https://github.com/OliManzoni/Manzoni_Chavis_Lab_EPHYS_Stats/blob/main/app_biophysique.py)",
+        "readme_content": """
+## 🧬 Synaptic Plasticity Analysis Suite
+**Chavis Lab & Manzoni Lab | Preprocessing & Biophysics**
+
+This platform is engineered to standardize the processing of electrophysiological data, transitioning from raw traces (.abf) to publication-ready statistical outputs. It eliminates manual measurement bias by automating the extraction of biophysical parameters and temporal normalization.
+
+### 🔬 Rationale and Core Objectives
+In synaptic plasticity research (LTP/LTD), the precision of "Time 0" and the stability of the baseline are paramount. This suite enables:
+* **Mitigation of Inter-operator Variability:** The algorithm provides objective peak detection and integral calculations consistently across all recordings.
+* **T=0 Standardization:** Automatic alignment based on induction timing to accurately compare maintenance kinetics.
+* **Dynamic Scaling:** Normalization relative to a user-defined reference period.
+
+### 📖 User Manual (Workflow)
+**1. Data Loading:** Import your Baseline and Post-Induction traces.
+**2. Protocol Definition:** Specify the onset of induction ($t=0$) and the normalization window (reference period for $100\%$).
+**3. Biophysical Analysis:** The algorithm extracts the Peak Amplitude ($Amp_m$) and Charge ($Ch_m$) for every sweep.
+**4. Normalization and Binning:** Raw data are normalized according to the following formula:
+$$Value_{norm} = \left( \frac{Value_{observed}}{\bar{x}_{baseline}} \right) \times 100$$
+Data points are subsequently grouped into temporal bins (typically 1-minute averages) to suppress stochastic noise and facilitate population-level visualization.
+
+> **Expert Guidance:** Do not overlook visual inspection. Use the interactive plots in the 'Inspection' tab to validate each cell prior to export, ensuring excessive background noise or unstable series resistance ($R_s$) does not compromise normalization.
+"""
     },
     "Français": {
         "lab_title": "Synaptic Plasticity Analysis",
@@ -109,7 +132,7 @@ T = {
         "peak_s": "fEPSP Pic: Début",
         "peak_e": "fEPSP Pic: Fin",
         "btn_extract": "🚀 EXTRAIRE LES DONNÉES BRUTES",
-        "tabs": ["📌 Inspection", "📉 Dynamique Brute", "📈 Analyse Normalisée"],
+        "tabs": ["📌 Inspection", "📉 Dynamique Brute", "📈 Analyse Normalisée", "📖 Documentation"],
         "inspect_sub": "Validation (Soustraction CNQX incluse)",
         "trace_cnqx": "Trace CNQX",
         "trace_bsl": "Baseline",
@@ -128,7 +151,30 @@ T = {
         "charge_pct": "Charge (% Baseline)",
         "export_header": "Exportation",
         "export_name": "Nom du fichier à exporter :",
-        "export_btn": "💾 EXPORTER CSV COMPLET"
+        "export_btn": "💾 EXPORTER CSV COMPLET",
+        "github_link": "🔗 [Code Source & Dépôt GitHub](https://github.com/OliManzoni/Manzoni_Chavis_Lab_EPHYS_Stats/blob/main/app_biophysique.py)",
+        "readme_content": """
+## 🧬 Synaptic Plasticity Analysis Suite
+**Chavis Lab & Manzoni Lab | Preprocessing & Biophysics**
+
+Cette plateforme a été conçue pour standardiser le traitement des données d'électrophysiologie, de la trace brute (.abf) aux statistiques prêtes pour la publication. Elle permet de s'affranchir des biais de mesure manuelle en automatisant l'extraction des paramètres biophysiques et la normalisation temporelle.
+
+### 🔬 Pourquoi utiliser cette application ?
+En recherche sur la plasticité synaptique (LTP/LTD), la précision du "Temps 0" et la stabilité de la ligne de base sont cruciales. Cette application permet de :
+* **Éviter la variabilité inter-opérateur :** L'algorithme détecte les pics et calcule les intégrales (charge) de la même manière pour chaque cellule.
+* **Standardiser le T=0 :** Calage automatique de l'induction pour comparer les cinétiques de maintenance.
+* **Gérer les échelles :** Normalisation dynamique par rapport à une période de référence définie par l'utilisateur.
+
+### 📖 Manuel de l'Utilisateur (Workflow)
+**1. Chargement des données :** Importez votre trace de contrôle (Baseline) et votre trace post-induction.
+**2. Définition du Protocole :** Indiquez à quelle minute l'induction a commencé ($t=0$) et sélectionnez la plage de temps qui servira de référence $100\%$.
+**3. Analyse Biophysique :** L'algorithme extrait l'Amplitude maximale ($Amp_m$) et la Charge ($Ch_m$) pour chaque sweep.
+**4. Normalisation et Binning :** Les données brutes sont normalisées selon la formule : 
+$$Value_{norm} = \left( \frac{Value_{observed}}{\bar{x}_{baseline}} \right) \times 100$$
+Les points sont ensuite regroupés par bins temporels pour lisser le bruit stochastique et faciliter la visualisation.
+
+> **Une petite astuce :** Ne négligez pas l'inspection visuelle ! Même si l'algorithme est robuste, une trace avec un bruit de fond excessif ou un accès série ($R_s$) instable peut fausser votre normalisation. Utilisez les graphiques interactifs pour valider chaque cellule.
+"""
     }
 }[lang]
 
@@ -145,6 +191,9 @@ with col_r:
 st.divider()
 
 # --- BARRE LATÉRALE ---
+st.sidebar.markdown(T['github_link'])
+st.sidebar.divider()
+
 st.sidebar.header(T['loading'])
 f_base = st.sidebar.file_uploader(T['f_base'], type=['abf'])
 f_post = st.sidebar.file_uploader(T['f_post'], type=['abf'])
@@ -232,7 +281,7 @@ if f_base and f_post:
         return abf.sweepX[:min_l], np.mean(sigs, axis=0)
 
     # --- AFFICHAGE DES ONGLETS ---
-    tab1, tab2, tab3 = st.tabs(T['tabs'])
+    tab1, tab2, tab3, tab4 = st.tabs(T['tabs'])
 
     with tab1:
         st.subheader(T['inspect_sub'])
@@ -315,6 +364,7 @@ if f_base and f_post:
             ax_n2.axhline(100, color='red', ls='--', lw=1)
             ax_n2.set_ylabel(T['charge_pct']); ax_n2.set_xlabel(T['time_min'])
             st.pyplot(fig_n)
+            
             st.markdown(f"### {T['export_header']}")
             nom_export = st.text_input(T['export_name'], value=f"{final_portee_id}_{f_base.name.split('.')[0]}.csv")
             if not nom_export.endswith(".csv"): nom_export += ".csv"
@@ -322,6 +372,9 @@ if f_base and f_post:
             df_export.insert(0, 'Portee', final_portee_id)
             df_export.insert(1, 'Source', f_base.name)
             st.download_button(T['export_btn'], df_export.to_csv(index=False), nom_export)
+
+        with tab4:
+            st.markdown(T['readme_content'])
 
     if os.path.exists(path_b): os.remove(path_b)
     if os.path.exists(path_p): os.remove(path_p)

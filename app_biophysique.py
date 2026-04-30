@@ -20,8 +20,8 @@ lang = st.sidebar.selectbox("Language / Langue", ["English", "Français"])
 T = {
     "English": {
         "lab_title": "Synaptic Plasticity Analysis",
-        "lab_subtitle": "Chavis Lab",
-        "reactive_note": "Automated LTP/LTD analysis",
+        "lab_subtitle": "Chavis Lab ",
+        "reactive_note": "Synaptic Plasticity (LTP/LTD) Analysis",
         "loading": "📂 1. Loading",
         "f_base": "Baseline File (.abf)",
         "f_post": "Post File (including CNQX)",
@@ -77,7 +77,7 @@ T = {
     "Français": {
         "lab_title": "Synaptic Plasticity Analysis",
         "lab_subtitle": "Chavis Lab",
-        "reactive_note": "Analyse automatique LTP/LTD",
+        "reactive_note": "Analyse Synaptic Plasticity (LTP/LTD)",
         "loading": "📂 1. Chargement",
         "f_base": "Fichier Baseline (.abf)",
         "f_post": "Fichier Post (incluant CNQX)",

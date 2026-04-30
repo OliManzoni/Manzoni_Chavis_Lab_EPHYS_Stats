@@ -73,7 +73,7 @@ T = {
         "export_header": "Export",
         "export_name": "Export filename:",
         "export_btn": "💾 EXPORT FULL CSV",
-        "github_link": "🔗 [Source Code & GitHub Repository](https://github.com/OliManzoni/Manzoni_Chavis_Lab_EPHYS_Stats/blob/main/app_biophysique.py)",
+        "readme_link": "📖 [View the official README on GitHub](https://github.com/OliManzoni/Manzoni_Chavis_Lab_EPHYS_Stats/blob/main/README.md)",
         "readme_content": """
 ## 🧬 Synaptic Plasticity Analysis Suite
 **Chavis Lab & Manzoni Lab | Preprocessing & Biophysics**
@@ -88,13 +88,12 @@ In synaptic plasticity research (LTP/LTD), the precision of "Time 0" and the sta
 
 ### 📖 User Manual (Workflow)
 **1. Data Loading:** Import your Baseline and Post-Induction traces.
-**2. Protocol Definition:** Specify the onset of induction ($t=0$) and the normalization window (reference period for $100\%$).
-**3. Biophysical Analysis:** The algorithm extracts the Peak Amplitude ($Amp_m$) and Charge ($Ch_m$) for every sweep.
-**4. Normalization and Binning:** Raw data are normalized according to the following formula:
-$$Value_{norm} = \left( \frac{Value_{observed}}{\bar{x}_{baseline}} \right) \times 100$$
+**2. Protocol Definition:** Specify the onset of induction (t=0) and the normalization window (reference period for 100%).
+**3. Biophysical Analysis:** The algorithm extracts the Peak Amplitude and Charge for every sweep.
+**4. Normalization and Binning:** Raw data are normalized relative to the baseline mean.
 Data points are subsequently grouped into temporal bins (typically 1-minute averages) to suppress stochastic noise and facilitate population-level visualization.
 
-> **Expert Guidance:** Do not overlook visual inspection. Use the interactive plots in the 'Inspection' tab to validate each cell prior to export, ensuring excessive background noise or unstable series resistance ($R_s$) does not compromise normalization.
+> **Expert Guidance:** Do not overlook visual inspection. Use the interactive plots in the 'Inspection' tab to validate each cell prior to export, ensuring excessive background noise or unstable series resistance does not compromise normalization.
 """
     },
     "Français": {
@@ -152,7 +151,7 @@ Data points are subsequently grouped into temporal bins (typically 1-minute aver
         "export_header": "Exportation",
         "export_name": "Nom du fichier à exporter :",
         "export_btn": "💾 EXPORTER CSV COMPLET",
-        "github_link": "🔗 [Code Source & Dépôt GitHub](https://github.com/OliManzoni/Manzoni_Chavis_Lab_EPHYS_Stats/blob/main/app_biophysique.py)",
+        "readme_link": "📖 [Consulter le README officiel sur GitHub](https://github.com/OliManzoni/Manzoni_Chavis_Lab_EPHYS_Stats/blob/main/README.md)",
         "readme_content": """
 ## 🧬 Synaptic Plasticity Analysis Suite
 **Chavis Lab & Manzoni Lab | Preprocessing & Biophysics**
@@ -167,13 +166,12 @@ En recherche sur la plasticité synaptique (LTP/LTD), la précision du "Temps 0"
 
 ### 📖 Manuel de l'Utilisateur (Workflow)
 **1. Chargement des données :** Importez votre trace de contrôle (Baseline) et votre trace post-induction.
-**2. Définition du Protocole :** Indiquez à quelle minute l'induction a commencé ($t=0$) et sélectionnez la plage de temps qui servira de référence $100\%$.
-**3. Analyse Biophysique :** L'algorithme extrait l'Amplitude maximale ($Amp_m$) et la Charge ($Ch_m$) pour chaque sweep.
-**4. Normalisation et Binning :** Les données brutes sont normalisées selon la formule : 
-$$Value_{norm} = \left( \frac{Value_{observed}}{\bar{x}_{baseline}} \right) \times 100$$
+**2. Définition du Protocole :** Indiquez à quelle minute l'induction a commencé (t=0) et sélectionnez la plage de temps qui servira de référence 100%.
+**3. Analyse Biophysique :** L'algorithme extrait l'Amplitude maximale et la Charge pour chaque sweep.
+**4. Normalisation et Binning :** Les données brutes sont normalisées par rapport à la moyenne de la baseline.
 Les points sont ensuite regroupés par bins temporels pour lisser le bruit stochastique et faciliter la visualisation.
 
-> **Une petite astuce :** Ne négligez pas l'inspection visuelle ! Même si l'algorithme est robuste, une trace avec un bruit de fond excessif ou un accès série ($R_s$) instable peut fausser votre normalisation. Utilisez les graphiques interactifs pour valider chaque cellule.
+> **Une petite astuce :** Ne négligez pas l'inspection visuelle ! Même si l'algorithme est robuste, une trace avec un bruit de fond excessif ou un accès série instable peut fausser votre normalisation. Utilisez les graphiques interactifs pour valider chaque cellule.
 """
     }
 }[lang]
@@ -187,11 +185,12 @@ with col_r:
     st.markdown(f"# {T['lab_title']}")
     st.markdown(f"### {T['lab_subtitle']}")
     st.markdown(f"#### *{T['reactive_note']}*")
+    st.markdown(T['readme_link']) # <-- LIEN DIRECT SOUS LE TITRE PRINCIPAL
 
 st.divider()
 
 # --- BARRE LATÉRALE ---
-st.sidebar.markdown(T['github_link'])
+st.sidebar.markdown(T['readme_link']) # <-- LIEN DIRECT DANS LA BARRE LATÉRALE
 st.sidebar.divider()
 
 st.sidebar.header(T['loading'])

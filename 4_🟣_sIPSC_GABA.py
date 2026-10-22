@@ -4,6 +4,7 @@ from ephys_analysis import read_abf, analyze_ipsc
 from ephys_io import digest
 from ephys_ui import session_compute
 import streamlit as st
+from ephys_tutorials import render_beginner_guide
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import signal, optimize, integrate, ndimage
@@ -43,7 +44,8 @@ def scroll_right():
     st.session_state.gaba_x_end += shift
 
 # --- LANGUAGE SELECTION ---
-lang = st.sidebar.selectbox("Language / Langue", ["English", "Français"])
+lang = st.session_state.get("global_language", "Français")
+render_beginner_guide("gaba", lang)
 
 T = {
     "English": {

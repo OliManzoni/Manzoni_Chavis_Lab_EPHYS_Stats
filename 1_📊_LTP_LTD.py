@@ -4,6 +4,7 @@ from ephys_analysis import read_abf
 from ephys_io import digest
 from ephys_ui import session_compute
 import streamlit as st
+from ephys_tutorials import render_beginner_guide
 import pyabf
 import matplotlib.pyplot as plt
 import numpy as np
@@ -18,7 +19,8 @@ if 'extracted_data' not in st.session_state:
     st.session_state.extracted_data = None
 
 # --- LANGUAGE SELECTION ---
-lang = st.sidebar.selectbox("Language / Langue", ["English", "Français"])
+lang = st.session_state.get("global_language", "Français")
+render_beginner_guide("ltp", lang)
 
 # Translation Dictionary & README Content
 T = {

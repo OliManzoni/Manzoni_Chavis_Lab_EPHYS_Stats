@@ -4,6 +4,7 @@ from ephys_analysis import read_abf, analyze_spikes
 from ephys_io import digest
 from ephys_ui import session_compute
 import streamlit as st
+from ephys_tutorials import render_beginner_guide
 import pyabf
 import numpy as np
 import pandas as pd
@@ -16,8 +17,8 @@ import os
 # --- CONFIGURATION DE LA PAGE ---
 
 # --- GESTION DU BILINGUISME ---
-st.sidebar.header("🌍 Language / Langue")
-lang = st.sidebar.radio("Select Interface Language:", ["Français", "English"])
+lang = st.session_state.get("global_language", "Français")
+render_beginner_guide("spikes", lang)
 
 T = {
     "title": {"Français": "Pipeline Expert : Excitabilité & Morphométrie", "English": "Expert Pipeline: Excitability & Morphometry"},

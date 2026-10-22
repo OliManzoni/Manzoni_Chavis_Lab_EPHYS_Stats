@@ -1,8 +1,8 @@
 # Analyse de plasticité synaptique | Synaptic Plasticity Analysis
 
-**Chavis Lab & Manzoni Lab** · Application Streamlit pour analyser les enregistrements de plasticité synaptique à long terme (LTP/LTD).
+**Chavis-Manzoni Lab** · Application Streamlit pour analyser les enregistrements de plasticité synaptique à long terme (LTP/LTD).
 
-**Chavis Lab & Manzoni Lab** · A Streamlit application for long-term synaptic plasticity (LTP/LTD) recordings.
+**Chavis-Manzoni Lab** · A Streamlit application for long-term synaptic plasticity (LTP/LTD) recordings.
 
 Application en ligne / Live app: [chavislab-plasticity.streamlit.app](https://chavislab-plasticity.streamlit.app/)
 

@@ -18,7 +18,7 @@ if 'extracted_data' not in st.session_state:
     st.session_state.extracted_data = None
 
 # --- LANGUAGE SELECTION ---
-lang = st.sidebar.selectbox("Language / Langue", ["English", "Français"])
+lang = st.session_state.get("global_language", "Français")
 
 # Translation Dictionary & README Content
 T = {

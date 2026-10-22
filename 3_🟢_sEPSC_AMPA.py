@@ -50,7 +50,7 @@ def scroll_right():
 
 
 # --- TRADUCTION DE L'INTERFACE ---
-lang = st.sidebar.selectbox("Language / Langue", ["Français", "English"])
+lang = st.session_state.get("global_language", "Français")
 T = {
     "Français": {
         "title": "sEPSC : Template Matching Itératif",

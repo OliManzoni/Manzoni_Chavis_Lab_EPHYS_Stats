@@ -16,8 +16,7 @@ import os
 # --- CONFIGURATION DE LA PAGE ---
 
 # --- GESTION DU BILINGUISME ---
-st.sidebar.header("🌍 Language / Langue")
-lang = st.sidebar.radio("Select Interface Language:", ["Français", "English"])
+lang = st.session_state.get("global_language", "Français")
 
 T = {
     "title": {"Français": "Pipeline Expert : Excitabilité & Morphométrie", "English": "Expert Pipeline: Excitability & Morphometry"},

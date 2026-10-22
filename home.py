@@ -6,6 +6,20 @@ st.markdown(
     "spontanés, la plasticité et les données de population à partir des fichiers **Axon Binary Format (.abf)**."
 )
 
+with st.container(border=True):
+    st.subheader("🌍 Langues / Languages")
+    french, english = st.columns(2)
+    with french:
+        st.markdown("**Français**")
+        st.write("Interface en français. Pour les pages bilingues, choisissez la langue dans le menu latéral de l’analyse.")
+    with english:
+        st.markdown("**English**")
+        st.write("An English interface is available for LTP/LTD, action potentials and excitability, spontaneous AMPA, and spontaneous GABA analyses. Select **English** in the analysis page sidebar.")
+    st.caption(
+        "Les pages Traitement par lots, Courbes de population et Comparaisons statistiques sont actuellement en français. "
+        "The batch, population curves, and statistical comparison pages are currently in French."
+    )
+
 st.subheader("Choisir une analyse")
 st.markdown(
     "- **Plasticité synaptique** : mesures fEPSP, normalisation temporelle et export des sweeps.\n"

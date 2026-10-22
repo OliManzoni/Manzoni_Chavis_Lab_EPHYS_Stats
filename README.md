@@ -1,8 +1,8 @@
 # Suite d’analyse électrophysiologique | Electrophysiology Analysis Suite
 
-**Chavis-Manzoni Lab** — Application Streamlit pour l’analyse des enregistrements électrophysiologiques, l’enseignement et la préparation des résultats.
+**Chavis-Manzoni Lab** — Application Streamlit pour l’analyse des enregistrements électrophysiologiques, l’enseignement et la préparation des résultats. L’interface est bilingue ; un guide débutant en français et en anglais est intégré au début de chaque outil.
 
-This Streamlit application brings together electrophysiology analyses for laboratory use, teaching, and reproducible result export.
+This Streamlit application brings together electrophysiology analyses for laboratory use, teaching, and reproducible result export. The interface is bilingual, and every tool starts with a beginner guide in French and English.
 
 **Archive Zenodo / Zenodo archive**: version 2.0.0 — [DOI de version / version DOI 10.5281/zenodo.23559027](https://doi.org/10.5281/zenodo.23559027) · [DOI concept 10.5281/zenodo.19910815](https://doi.org/10.5281/zenodo.19910815), qui renvoie vers la dernière version publiée / which resolves to the latest published version.
 

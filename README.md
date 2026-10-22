@@ -4,7 +4,7 @@
 
 This Streamlit application brings together electrophysiology analyses for laboratory use, teaching, and reproducible result export.
 
-**DOI Zenodo / Zenodo DOI**: [10.5281/zenodo.19910815](https://doi.org/10.5281/zenodo.19910815) — DOI concept, qui renvoie vers la dernière version publiée / concept DOI, which resolves to the latest published version.
+**Archive Zenodo / Zenodo archive**: version 2.0.0 — [DOI de version / version DOI 10.5281/zenodo.23559027](https://doi.org/10.5281/zenodo.23559027) · [DOI concept 10.5281/zenodo.19910815](https://doi.org/10.5281/zenodo.19910815), qui renvoie vers la dernière version publiée / which resolves to the latest published version.
 
 ## Français
 
@@ -51,7 +51,7 @@ Les résultats de régression et les tests locaux sont décrits dans [POINT_PROJ
 
 ### Citation
 
-Citez la version utilisée avec le DOI concept Zenodo : [10.5281/zenodo.19910815](https://doi.org/10.5281/zenodo.19910815).
+Pour citer précisément cette version 2.0.0, utilisez son DOI : [10.5281/zenodo.23559027](https://doi.org/10.5281/zenodo.23559027). Pour citer le projet toutes versions confondues, utilisez le DOI concept : [10.5281/zenodo.19910815](https://doi.org/10.5281/zenodo.19910815).
 
 ## English
 
@@ -98,4 +98,4 @@ Regression checks and local tests are documented in [POINT_PROJET.md](POINT_PROJ
 
 ### Citation
 
-Cite the version you used with the Zenodo concept DOI: [10.5281/zenodo.19910815](https://doi.org/10.5281/zenodo.19910815).
+For this specific version 2.0.0, cite its version DOI: [10.5281/zenodo.23559027](https://doi.org/10.5281/zenodo.23559027). For the project across all versions, use the concept DOI: [10.5281/zenodo.19910815](https://doi.org/10.5281/zenodo.19910815).

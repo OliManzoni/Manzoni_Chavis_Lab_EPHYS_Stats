@@ -78,7 +78,8 @@ if not frames:
         "Cell_ID": ["C01", "C02", "C03", "C04"],
         "Rin_MOhms": [120, 135, 145, 150],
     })
-    st.download_button(tr("Télécharger un modèle CSV", "Download a CSV template"), example.to_csv(index=False), "modele_statistiques.csv")
+    st.download_button(tr("Télécharger un modèle CSV", "Download a CSV template"), example.to_csv(index=False),
+                        "modele_statistiques.csv" if not en else "statistics_template.csv")
     st.stop()
 
 data = pd.concat(frames, ignore_index=True, sort=False)
@@ -281,6 +282,9 @@ for index, metric in enumerate(metrics):
         ax[0].axhline(0, color=".5")
         ax[0].set(xlabel=tr("Valeur ajustée", "Fitted value"), ylabel=tr("Résidu", "Residual"))
         stats.probplot(diag.residual, plot=ax[1])
+        ax[1].set_title(tr("Graphique Q-Q normal", "Normal Q-Q plot"))
+        ax[1].set_xlabel(tr("Quantiles théoriques", "Theoretical quantiles"))
+        ax[1].set_ylabel(tr("Quantiles observés des résidus", "Ordered residuals"))
         diagnostic.tight_layout()
         with st.expander(tr(f"Diagnostics — {metric}", f"Diagnostics — {metric}")):
             st.pyplot(diagnostic)

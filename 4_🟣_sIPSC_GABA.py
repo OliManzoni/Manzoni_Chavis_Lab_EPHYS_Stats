@@ -43,7 +43,7 @@ def scroll_right():
     st.session_state.gaba_x_end += shift
 
 # --- LANGUAGE SELECTION ---
-lang = st.sidebar.selectbox("Language / Langue", ["English", "Français"])
+lang = st.session_state.get("global_language", "Français")
 
 T = {
     "English": {

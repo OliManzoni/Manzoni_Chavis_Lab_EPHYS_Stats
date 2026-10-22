@@ -4,6 +4,7 @@ from ephys_ui import show_figure, logo_path as get_logo_path
 from ephys_analysis import read_abf
 from ephys_ui import session_compute
 import streamlit as st
+from ephys_tutorials import render_beginner_guide
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy import signal, integrate, ndimage
@@ -51,6 +52,7 @@ def scroll_right():
 
 # --- TRADUCTION DE L'INTERFACE ---
 lang = st.session_state.get("global_language", "Français")
+render_beginner_guide("ampa", lang)
 T = {
     "Français": {
         "title": "sEPSC : Template Matching Itératif",
